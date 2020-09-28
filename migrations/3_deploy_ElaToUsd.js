@@ -15,6 +15,7 @@ module.exports = async function (deployer, network) {
     )
     aggregatorAddr = aggregatorFakeAddrRaw.toString().split('=')[1]
   } else {
+    // this is the already known deployed Aggregator contract on testnet
     aggregatorAddr = '0xA64267e44af675498310620418c8F08A9dAeB1eb'
   }
 
