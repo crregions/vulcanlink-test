@@ -14,6 +14,10 @@ contract ElaToUsd is Initializable {
         oracleAggregator = Aggregator(aggregatorAddr);
     }
 
+    function isInitalized() external pure returns (bool) {
+        return initialized;
+    }
+
     function calcUsd(int256 elaAmt) external view returns (int256) {
         int256 elaValueUsd = oracleAggregator.latestAnswer();
 
